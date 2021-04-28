@@ -2,25 +2,19 @@
 
 Rock Paper Scissors
 
-user inputs choice (check)
-program stores choice in variable (check)
-computer generates choice (check)
-computer choice stored in variable (check)
-program compares the two choices (check)
-if rock and paper are chosen, paper wins (check)
-if paper and scissors are chosen, scissors wins (check)
-if rock and scissors are chosen, rock wins (check)
+user inputs choice (prompt())
+program stores choice in variable (let userInput)
+computer generates choice (Math.floor(Math.random())
+computer choice stored in variable (let comChoice)
+program compares the two choices (playRound())
+if rock and paper are chosen, paper wins (if/else)
+if paper and scissors are chosen, scissors wins (if/else)
+if rock and scissors are chosen, rock wins (if/else)
 */
-
-/*Created variables for use in game. comSelect runs and
-stores the outcome of function computerPlay while pSelect
-is for user input. */
-const comSelect = computerPlay();
-const pSelect = 'Paper'.toLowerCase();
 
 /*Function 1: computerPlay generates random number and assigns
 a choice (rock, paper, scissors) to it based on the generated number.
-All of this in turn is stored in a variable 'comChoice */
+All of this in turn is stored in a variable 'comChoice' */
 function computerPlay() {
    let comChoice = Math.floor(Math.random() * 3)
    if (comChoice == 0){
@@ -82,7 +76,7 @@ function playRound(pSelect, comSelect){
         return roundWinner;
     }
     else {
-        let roundWinner = alert('Please enter a choice.')
+        let roundWinner = alert('Please enter a choice (Rock, Paper, or Scissors).')
         return roundWinner;
     }
 }
@@ -90,11 +84,17 @@ function playRound(pSelect, comSelect){
 
 
 
-/* Function #3: runs function playRound and allows user input */
+/* Function #3: Intializaes a variable ('userInput') which consists
+of a prompt which takes the user's input and stores it. It then runs 
+the previously function 'playRound' with the data stored from 'userInput'
+used for the argument 'pSelect' while running function computerPlay()
+for the argument 'comSelect'. Setting it up this way should allow the
+computer to generate a new number/choice each time the function is run. */
 function game(){
-    /* let userInput = prompt('Choice?').toLowerCase(); */
-    return playRound(pSelect, comSelect);
+    let userInput = prompt('Choice?').toLowerCase();
+    return playRound(userInput, computerPlay());
 }
 
+console.log(game());
 
-
+/* End of Code */
