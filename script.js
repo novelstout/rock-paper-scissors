@@ -35,43 +35,43 @@ function computerPlay() {
    
 }
 
-/*Function #2: playRound takes pSelect and comSelect and compares
+/*Function #2: playRound takes playerSelect and comSelect and compares
 their stored strings to one another. (Need to find a way to condense) */
-function playRound(pSelect, comSelect){
+function playRound(playerSelect, comSelect){
     let roundWinner
-    if (pSelect == 'rock' && comSelect == 'scissors'){
+    if (playerSelect == 'rock' && comSelect == 'scissors'){
         roundWinner = 'Rock beats Scissors! You win!';
         return roundWinner;
     }
-    else if (pSelect == 'rock' && comSelect == 'paper'){
+    else if (playerSelect == 'rock' && comSelect == 'paper'){
         roundWinner = 'Oops! Paper covers Rock! You lose!';
         return roundWinner;
     }
-    else if (pSelect == 'rock' && comSelect == 'rock'){
+    else if (playerSelect == 'rock' && comSelect == 'rock'){
         roundWinner = 'Uh-oh! We have a tie!';
         return roundWinner;
     }
-    else if (pSelect == 'paper' && comSelect == 'scissors'){
+    else if (playerSelect == 'paper' && comSelect == 'scissors'){
         roundWinner = 'Oops! Scissors beats paper! You lose!';
         return roundWinner;
     }
-    else if (pSelect == 'paper' && comSelect == 'rock'){
+    else if (playerSelect == 'paper' && comSelect == 'rock'){
         roundWinner = 'Paper covers Rock! You win!';
         return roundWinner;
     }
-    else if (pSelect == 'paper' && comSelect == 'paper'){
+    else if (playerSelect == 'paper' && comSelect == 'paper'){
         roundWinner = 'Uh-oh! We have a tie!';
         return roundWinner;
     }
-    else if (pSelect == 'scissors' && comSelect == 'paper'){
+    else if (playerSelect == 'scissors' && comSelect == 'paper'){
         roundWinner = 'Scissors beats paper! You win!';
         return roundWinner;
     }
-    else if (pSelect == 'scissors' && comSelect == 'rock'){
+    else if (playerSelect == 'scissors' && comSelect == 'rock'){
         roundWinner = 'Oops! Rock beats scissors! You lose!';
         return roundWinner;
     }
-    else if (pSelect == 'scissors' && comSelect == 'scissors'){
+    else if (playerSelect == 'scissors' && comSelect == 'scissors'){
         roundWinner = 'Uh-oh! We have a tie!';
         return roundWinner;
     }
@@ -87,7 +87,7 @@ function playRound(pSelect, comSelect){
 /* Function #3: Intializaes a variable ('userInput') which consists
 of a prompt which takes the user's input and stores it. It then runs 
 the previously function 'playRound' with the data stored from 'userInput'
-used for the argument 'pSelect' while running function computerPlay()
+used for the argument 'playerSelect' while running function computerPlay()
 for the argument 'comSelect'. Setting it up this way should allow the
 computer to generate a new number/choice each time the function is run. */
 function game(){
