@@ -92,7 +92,7 @@ for the argument 'comSelect'. Setting it up this way should allow the
 computer to generate a new number/choice each time the function is run. */
 function game(){
     let userInput = prompt('Choice?').toLowerCase();
-    return playRound(userInput, computerPlay());
+    alert(playRound(userInput, computerPlay()));
 }
 
 console.log(game());

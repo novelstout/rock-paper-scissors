@@ -10,3 +10,7 @@ Lastly, we have a function that wraps everything into one; first prompting users
 an a string based on the combination. 
 
 More detailed descriptions can be found in comments within the code, as well as my thought process at the start. 
+
+UPDATE 5/25/21
+
+Alright so I've decided to make this game playable from prompts alone, meaning you won't have to fire up dev tools to see it in action. Once I figure out how to loop, I'll make it so that it can be replayed without refreshing. 
